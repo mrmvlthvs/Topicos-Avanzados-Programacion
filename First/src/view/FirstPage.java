@@ -3,10 +3,6 @@ package view;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 
-/**
- *
- * @author marle
- */
 public class FirstPage extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FirstPage.class.getName());
