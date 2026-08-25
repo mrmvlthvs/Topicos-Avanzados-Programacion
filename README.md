@@ -16,9 +16,9 @@ Martes 25 de agosto 2026
 
 - [Ejercicio 3](/ejercicio03/gretting/src/Greeting2.java): Favor de correr el codigo de programa llamado Greeting2.java sacado del libro java para estudiantes. 
              
-- Ejercicio 4: Favor de traducir el programa del ejercicio 3 a Python3
+- [Ejercicio 4](/ejercicio04/Greeting2.py): Favor de traducir el programa del ejercicio 3 a Python3
 
-Ejercicio 5: Favor de traducir el programa del ejercicio 3 para usar javaFX             
+- [Ejercicio 5](/ejercicio03/gretting/src/Greeting2.java): Favor de traducir el programa del ejercicio 3 para usar javaFX             
 
 Ejercicio 6: Favor de correr el código del programa llamado SimpleGUI.py 
              presente en el subdiretorio python del aula virtual segundo tema.
