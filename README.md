@@ -29,5 +29,5 @@ Martes 25 de agosto 2026
              identificando los componentes que son contenedores y los que son 
              activadores para entrada en el algoritmo.
 
-- [Ejercicio 5](/ejercicio03/gretting/src/Greeting2.java): Favor de correr el programa GUIComponentsCohes.py presente en el 
+- [Ejercicio 8](/ejercicio03/gretting/src/Greeting2.java): Favor de correr el programa GUIComponentsCohes.py presente en el 
              aula virtual.

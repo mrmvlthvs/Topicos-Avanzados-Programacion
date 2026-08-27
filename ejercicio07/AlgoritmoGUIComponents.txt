@@ -1,0 +1,129 @@
+----- ALGORITMO GUI Components -----
+
+1. meta():
+    Crear una interfaz gráfica llamada "Show GUI Components"
+    que permita al usuario interactuar con diferentes
+    componentes gráficos.
+
+    El sistema debe permitir:
+        - Introducir un nombre.
+        - Mostrar el nombre en una etiqueta.
+        - Seleccionar la opción Bold.
+        - Seleccionar la opción Italic.
+        - Seleccionar el color Red.
+        - Seleccionar el color Yellow.
+        - Cambiar el color del texto mostrado.
+    Mantener la interfaz activa mediante un ciclo de eventos.
+
+2. data():
+    Crear ventana principal:
+        window = ventana principal
+    Crear contenedores:
+        frame1 = contenedor 1
+        frame2 = contenedor 2
+    Crear componentes de salida:
+        lbl = etiqueta con texto inicial
+               "Programming is fun"
+        label = etiqueta con texto
+                "Enter your name:"
+    Crear componentes de entrada:
+        entry = campo para introducir el nombre
+        C1 = casilla de selección "Bold"
+        C2 = casilla de selección "Italic"
+        rbRed = botón de opción "Red"
+        rbYellow = botón de opción "Yellow"
+    Crear activadores:
+        btOk = botón "OK"
+                activa processButton()
+        btCancel = botón "Cancel"
+                activa processButton()
+        rbRed = activador de processRadiobutton()
+        rbYellow = activador de processRadiobutton()
+    Crear variables:
+        CheckVar1 = almacena estado de Bold
+        CheckVar2 = almacena estado de Italic
+        v1 = almacena opción de color seleccionada
+        msg = almacena el nombre introducido
+
+3. proceso:
+
+3.1 processButton():
+    Obtener el texto introducido por el usuario:
+        texto = obtener el contenido de msg
+    Cambiar el texto de la etiqueta:
+        lbl.texto = texto
+
+3.2 processRadiobutton():
+    colorSeleccionado = obtener el valor de v1
+    si (colorSeleccionado == "R") empezar
+        cambiar color de texto de lbl a "red"
+    de otro modo si (colorSeleccionado == "Y") empezar
+        cambiar color de texto de lbl a "yellow"
+    terminar si
+
+3.3 processCheckbuttons():
+    si el usuario selecciona C1 (Bold) empezar
+        CheckVar1 = 1
+    de otro modo
+        CheckVar1 = 0
+    terminar si
+    si el usuario selecciona C2 (Italic) empezar
+        CheckVar2 = 1
+    de otro modo
+        CheckVar2 = 0
+    terminar si
+
+4. resultados():
+    Mostrar en lbl: "Programming is fun"
+    Si el usuario introduce un nombre y activa OK:
+        Mostrar el nombre introducido en lbl.
+    Si el usuario introduce un nombre y activa Cancel:
+        Mostrar el nombre introducido en lbl.
+    Si selecciona Red:
+        Mostrar el texto de lbl en color rojo.
+    Si selecciona Yellow:
+        Mostrar el texto de lbl en color amarillo.
+    Si selecciona Bold:
+        Almacenar el estado Bold.
+        Sin proceso adicional.
+    Si selecciona Italic:
+        Almacenar el estado Italic.
+        Sin proceso adicional.
+
+5. navegabilidad():
+    Iniciar GUIComponentes.
+    Crear ventana.
+    Crear contenedores.
+    Crear componentes.
+    Colocar componentes en la ventana.
+    Mostrar interfaz.
+    Iniciar ciclo de eventos.
+    terminar mientras (window esté abierta) empezar
+        esperar evento del usuario;
+        si (evento == introducir texto) empezar
+            actualizar msg;
+        terminar si
+        si (evento == Bold) empezar
+            actualizar CheckVar1;
+        terminar si
+        si (evento == Italic) empezar
+            actualizar CheckVar2;
+        terminar si
+        si (evento == Red) empezar
+            llamar a processRadiobutton();
+        terminar si
+        si (evento == Yellow) empezar
+            llamar a processRadiobutton();
+        terminar si
+        si (evento == OK) empezar
+            llamar a processButton();
+        terminar si
+        si (evento == Cancel) empezar
+            llamar a processButton();
+        terminar si
+        si (evento == cerrar ventana) empezar
+            salir del ciclo;
+        terminar si
+    terminar mientras
+
+FIN DEL ALGORITMO
