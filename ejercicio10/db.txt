@@ -1,0 +1,8 @@
+[
+{"first_name":"negro", "last_name":"durazo"},
+{"first_name":"pedro", "last_name":"perez"},
+{"first_name":"sancho", "last_name":"sanchez"},
+{"first_name":"potro", "last_name":"gutierrez"},
+{"first_name":"gonzalo", "last_name":"gonzalez"},
+{"first_name":"hernan", "last_name":"hernandez"}
+]
