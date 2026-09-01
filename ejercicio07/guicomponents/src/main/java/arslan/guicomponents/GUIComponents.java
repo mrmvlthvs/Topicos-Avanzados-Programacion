@@ -1,14 +1,16 @@
-package arslan.guicomponents;
-
-/*GUIComponents.java
-Tomado de Liang:
-por Cirino Silva Tovar
-el: 5 de Julio 2015
-
-El ejercicio 3 consiste en aplicar ingenieria inversa a este código para que a
- partir del programa se obtenga el diseño del seudocódigo aplicando el enfoque de sistemas e
-identificando los componentes que son contenedores y los que son activadores para entrada en el algoritmo
+/*
+Tecnológico Nacional de México
+Instituto Tecnológico de León, Campus 1
+Carrera: Ingeniería en Sistemas Computacionales
+Materia: Topicos Avanzados de Programacion
+Horario:
+    Martes y Jueves de 7:00 a 8:45
+    Viernes de 7:50 a 8:40
+Alumno: Marlene Inés Moreno Velázquez
+Ejercicio #7
+Fecha: 25/08/2026
 */
+package arslan.guicomponents; //
 
 import javax.swing.*;
 
