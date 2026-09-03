@@ -14,6 +14,8 @@ Fecha: 01/09/2026
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class BorderExample {
   private Frame f;
@@ -34,6 +36,13 @@ public class BorderExample {
     f.add(bw, BorderLayout.WEST);
     f.add(be, BorderLayout.EAST);
     f.add(bc, BorderLayout.CENTER);
+
+    f.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
     f.setSize(200,200);
     f.setVisible(true);
   }

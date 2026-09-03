@@ -11,7 +11,11 @@ Ejercicio #14
 Fecha: 01/09/2026
 */
 
-import java.awt.*;
+import java.awt.Button;
+import java.awt.Frame; // Import necesario para manejar eventos de ventana
+import java.awt.GridLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class GridExample {
   private Frame f;
@@ -24,9 +28,18 @@ public class GridExample {
   }
 
   public void launchFrame() {
-    f.setLayout (new GridLayout(3,2));
+    f.setLayout(new GridLayout(3,2));
     for (Button boton:b)
       f.add(boton);
+    
+    // ** Solución para cerrar el programa al presionar la X **
+    f.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
+
     f.pack();
     f.setVisible(true);
   }
@@ -36,4 +49,3 @@ public class GridExample {
     grid.launchFrame();
   }
 }
-

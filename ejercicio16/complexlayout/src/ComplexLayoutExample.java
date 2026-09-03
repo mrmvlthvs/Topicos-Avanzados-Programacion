@@ -11,7 +11,12 @@ Ejercicio #16
 Fecha: 01/09/2026
 */
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class ComplexLayoutExample {
   private Frame f;
@@ -36,6 +41,13 @@ public class ComplexLayoutExample {
     p.add(bfile);
     p.add(bhelp);
     f.add(p, BorderLayout.NORTH);
+
+    f.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
     // Pack the frame and make it visible
     f.pack();
     f.setVisible(true);

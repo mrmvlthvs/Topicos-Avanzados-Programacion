@@ -10,7 +10,11 @@ Alumno: Marlene Inés Moreno Velázquez
 Ejercicio #11
 Fecha: 29/08/2026
 */
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.event.WindowAdapter; // Import necesario
+import java.awt.event.WindowEvent; // Import necesario
 
 public class FrameWithPanel {
   private Frame f;
@@ -29,6 +33,15 @@ public class FrameWithPanel {
     pan.setBackground(Color.yellow);
 
     f.add(pan);
+
+    // ** Solución para cerrar el programa al presionar la X **
+    f.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
+
     f.setVisible(true);
   }
 

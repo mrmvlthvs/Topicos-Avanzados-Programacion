@@ -10,7 +10,11 @@ Alumno: Marlene Inés Moreno Velázquez
 Ejercicio #13
 Fecha: 01/09/2026
 */
-import java.awt.*;
+import java.awt.Button;
+import java.awt.FlowLayout; // Import necesario para manejar eventos de ventana
+import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FlowExample {
   private Frame f;
@@ -30,6 +34,15 @@ public class FlowExample {
     f.add(button1);
     f.add(button2);
     f.add(button3);
+    
+    // ** Solución para cerrar el programa al presionar la X **
+    f.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
+
     f.setSize(100,100);
     f.setVisible(true);
   }
