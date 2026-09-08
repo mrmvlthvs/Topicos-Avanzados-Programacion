@@ -33,33 +33,32 @@ Martes 25 de agosto 2026
 
 29 Agosto 2026
 
-- [Ejercicio 9](): Favor de correr el ejercicio de la referencia:
+- [Ejercicio 9](/ejercicio09/src/test/Main.java): Favor de correr el ejercicio de la referencia:
 http://shulgadim.blogspot.com/2012/01/model-view-controller-mvc-pattern_13.html
              que genera un ejemplo simple del patron mvc.             
 
-- [Ejercicio 10](): Favor de correr el ejercicio de la referencia:
+- [Ejercicio 10](/ejercicio10/controller.py): Favor de correr el ejercicio de la referencia:
           https://stackoverflow.com/questions/38042632/mvc-the-simplest-example
           para el patron de diseño MVC ahora con python.
 
-ejercicio 11: Favor de correr la clase FrameWithPanel.java presente en el 
+- [Ejercicio 11](/ejercicio11/framewithpanel/src/FrameWithPanel.java): Favor de correr la clase FrameWithPanel.java presente en el 
              subdirectorio java del segundo tema en su aula virtual.
              
 1 Septiembre 2026             
 
-ejercicio 12: Favor de explorar las referencias que señala la diapositiva 29
+- [Ejercicio 12](): Favor de explorar las referencias que señala la diapositiva 29
              del tema 2.1 Definicion conceptual de componentes y otras.
 
-Ejercicio 13: Favor de correr la clase FlowExample.java presente en su aula
+- [Ejercicio 13](/ejercicio13/flowexample/src/FlowExample.java): Favor de correr la clase FlowExample.java presente en su aula
               virtual.
 
-Ejercicio 14: Lo mismo que el ejercicio 10 ahora con la clase GridExample.java
+- [Ejercicio 14](/ejercicio14/gridexample/src/GridExample.java): Lo mismo que el ejercicio 10 ahora con la clase GridExample.java
 
-Ejercicio 15: Lo mismo que el ejercicio 11 ahora con la clase 
-          BorderExample.java presente en el segundo tema de su aula virtual
+- [Ejercicio 15](/ejercicio15/borderexample/src/BorderExample.java): Lo mismo que el ejercicio 11 ahora con la clase BorderExample.java presente en el segundo tema de su aula virtual
 
-Ejercicio 16: Lo mismo que el ejercicio 12 ahora con ComplexLayoutExample.java
+- [Ejercicio 16](/ejercicio16/complexlayout/src/ComplexLayoutExample.java): Lo mismo que el ejercicio 12 ahora con ComplexLayoutExample.java
 
-Ejercicio 17: Favor de elaborar un algoritmo que le permita usar un menu para 
+- [Ejercicio 17](): Favor de elaborar un algoritmo que le permita usar un menu para 
               correr los codigos correspondientes a los tres layouts 
               utilizables en python, pack, grid y place; usando la pagina de
               referencia:
@@ -67,16 +66,16 @@ Ejercicio 17: Favor de elaborar un algoritmo que le permita usar un menu para
               el menú debera tener las opciones necesarias para correr los
               ejemplos propuestos en dicha url.
                  
-ejercicio 18: Favor de correr la clase GridManagerDemo.py del Liang pag 284
+- [Ejercicio 18](/ejercicio18/GridManagerDemo.py): Favor de correr la clase GridManagerDemo.py del Liang pag 284
                          
-Ejercicio 19: Lo mismo que el ejercicio 18 ahora usando la clase 
+- [Ejercicio 19](/ejercicio19/PackManagerDemo.py): Lo mismo que el ejercicio 18 ahora usando la clase 
               PackManagerDemo.py del mismo libro pag. 285
                           
-Ejercicio 20: Lo mismo que el ejercicio 19 ahora usando la clase 
+- [Ejercicio 20](/ejercicio20/PackManagerDemoWithSide.py): Lo mismo que el ejercicio 19 ahora usando la clase 
               PackManagerDemoWhitSide.py del mismo libro pag. 285 
                       
-Ejercicio 21: Lo mismo que el ejercicio 20 pero ahora usando la clase 
+- [Ejercicio 21](/ejercicio21/PlaceManagerDemo.py): Lo mismo que el ejercicio 20 pero ahora usando la clase 
               PlaceManagerDemo.py del mismo libro pag. 286       
           
-Ejercicio 22: Favor de correr la clase GetSystemProperties.java 
+- [Ejercicio 22](/ejercicio22/getproperties/src/GetSystemProperties.java): Favor de correr la clase GetSystemProperties.java 
               presente en su aula virtual.
