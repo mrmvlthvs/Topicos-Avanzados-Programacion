@@ -15,7 +15,7 @@ public class PruebaImageIcon {
     // 1. META
     void meta() {
         String msg = """
-            === PRUEBA DE COMPONENTE SWING: IMAGEICON ===
+            \n====== PRUEBA DE COMPONENTE SWING: IMAGEICON ======
             Demostracion de carga y visualizacion de una imagen
             utilizando el componente ImageIcon de javax.swing.*
             """;
@@ -36,7 +36,7 @@ public class PruebaImageIcon {
         }
 
         mainFrame = new JFrame("Prueba ImageIcon - Marlene I.M. Velazquez");
-        mainFrame.setSize(500, 400);
+        mainFrame.setSize(500, 600);
         mainFrame.setLayout(new FlowLayout());
         mainFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         ImageIcon icon = new ImageIcon(rutaImagen);
@@ -66,7 +66,9 @@ public class PruebaImageIcon {
 
             switch (opcion) {
                 case "1" -> {
-                    app.data(); app.proceso(); app.resultados();
+                    app.data();
+                    app.proceso();
+                    app.resultados();
                 }
                 case "2" -> {
                     System.out.println("Finalizando ejecucion ordenadamente...");

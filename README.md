@@ -79,3 +79,85 @@ http://shulgadim.blogspot.com/2012/01/model-view-controller-mvc-pattern_13.html
           
 - [Ejercicio 22](/ejercicio22/getproperties/src/GetSystemProperties.java): Favor de correr la clase GetSystemProperties.java 
               presente en su aula virtual.
+
+4 sep 2026              
+                                                                  
+- [Ejercicio 23](/ejercicio23/zipdirectory/src/main/java/ZipDirectoryExample.java): Favor de usar la referencia:
+              https://kodejava.org/?s=ZipDirectoryExample y correr la clase
+              ZipDirectoryExample.java que empaca un subdirectorio del disco
+              en la unidad D:\\Data recursivamente con todos sus 
+              subdirectorios.
+
+- [Ejercicio 24](/ejercicio24/unzipfiles/src/main/java/UnzipFiles.java): Favor de usar la referencia:
+              https://www.journaldev.com/960/java-unzip-file-example y correr
+              la clase: UnzipFiles.java como contraparte del ejercicio 23
+              en este caso se utilizan bibliotecas de los paquetes java.io.*
+              y java.util.*.
+
+- [Ejercicio 25](): hacer lo mismo que los ejercicios 23 y 24 con python usando la 
+             referencia:
+             https://www.geeksforgeeks.org/working-zip-files-python/
+https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory
+
+- [*Tarea 1*](/tarea1/imageicon/src/main/java/arslan/PruebaImageIcon.java): Para el Martes 22 de Septiembre del 2026
+
+         Por favor utilice la referencia 
+         
+         https://www.tutorialspoint.com/swing/swing_quick_guide.htm
+         
+         Para utilizar uno de los ejemplos incluidos en ella con alguno de los 
+         componentes graficos que pertenecen al paquete javax.swing.* y que 
+         estan numerados a partir de 1. Jlabel hasta 17. JSpinner. Use la 
+         siguiente formula para determinar el:
+         
+         Componente que le toca a usted ) = # de lista mod 17 + 1
+         **ImageIcon**
+                   
+         Y a partir del codigo fuente del ejemplo correspondiente. Entregue
+         su reporte
+         
+         Incluyendo:   
+         1. protocolo no portada.
+         2. Algoritmo con enfoque de sistemas en pseudocodigo
+         3. Codigo clase de prueba modificado para ajustarse al algoritmo
+         4. Resultados de corrida si hay.
+                     
+         Todo a renglon seguido fondo blanco y sin incluir pantallasos con
+         fondo negro en sus resultados o en sus codigos. 
+         
+- [Ejercicio 26](): Favor de correr el codigo de la referencia:
+
+          https://coderslegacy.com/java/javafx-widgets-list/
+					    
+          La clase Tutorial para los componentes graficos o widgets javafx 
+					    
+          1. Label          2. Button         3. TextField      4. TextArea		
+          5. TextClass      6. ImageView      7. PasswordField  8. ComboBox			
+          9. RadioButton   10. CheckBox      11. MenuButton    12. InputDialog	
+         13. ProgressBar   14. Separator     15. HiperLink     16. FontClass
+         17. ToolBar       18. MediaView     19. FileChooser   20. DatePicker  
+				 
+				 # que le toca a usted = (# lista + numero de ejercicio) mod 20 + 1         
+                           
+- [Ejercicio 27](/): favor de correr el ejemplo de enumerados en el aula virtual 
+             usando la clase TestPlayingCard.java
+
+- [Ejercicio 28](/): favor de navegar a la referencia URL
+             https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+             para copiar el enumerado Planet.java y correrlo en su terminal
+
+- [Ejercicio 29](/ejercicio29/ejem1/src/main/java/Ejemplo1.java): Favor de correr el ejemplo 1 del pdf llamado "Aprenda Java Como 
+              si estuviera en primero"
+              
+- [Ejercicio 30](/ejercicio30/listatap/src/main/java/ListaTap.java): Favor de correr la clase ListTap.java presente en su aula
+                  virtual.               
+
+- [Ejercicio 31](/ejercicio31/setexample/src/main/java/SetExample.java): Favor de correr la clase SetExample.java presente en el segundo
+              tema del curso en el aula virtual.
+
+- [Ejercicio 32](): Lo mismo que el ejercicio 30 ahora par ListExample.java
+
+Ejercicio 33: Favor de correr el ejercicio llamado GenericMethodTest.java
+              presente en la referencia URL
+              http://www.tutorialspoint.com/java/java_generics.htm 
+
