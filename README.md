@@ -157,7 +157,7 @@ https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-dir
 
 - [Ejercicio 32](): Lo mismo que el ejercicio 30 ahora par ListExample.java
 
-Ejercicio 33: Favor de correr el ejercicio llamado GenericMethodTest.java
+- [Ejercicio 33](/ejercicio33/genericmethod/src/main/java/GenericMethodTest.java): Favor de correr el ejercicio llamado GenericMethodTest.java
               presente en la referencia URL
               http://www.tutorialspoint.com/java/java_generics.htm 
 
