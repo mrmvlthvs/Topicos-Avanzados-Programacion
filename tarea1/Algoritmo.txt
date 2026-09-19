@@ -1,0 +1,67 @@
+// 1. META
+metodo meta() empezar
+    Escribir("=== PRUEBA DE COMPONENTE SWING: IMAGEICON ===");
+    Escribir("Demostración de carga y visualizacion de una imagen");
+    Escribir("utilizando el componente ImageIcon de javax.swing.*");
+terminar metodo
+
+// 2. DATA
+metodo data() empezar
+    Escribir("Ingrese la ruta absoluta de la imagen (.jpg o .png):");
+    rutaImagen = Leer cadena desde teclado;
+terminar metodo
+
+// 3. PROCESO
+metodo proceso() empezar
+    si (rutaImagen esta vacia) entonces
+        Escribir("Error: La ruta proporcionada no es valida.");
+        retornar;
+    terminar si
+
+    marcoPrincipal = instanciar JFrame("Prueba ImageIcon - TutorialsPoint");
+    llamar a marcoPrincipal.setSize(500, 400);
+    llamar a marcoPrincipal.setLayout(FlowLayout);
+    
+    icono = instanciar ImageIcon(rutaImagen);
+    etiquetaImagen = instanciar JLabel(icono);
+    
+    llamar a marcoPrincipal.add(etiquetaImagen);
+    Escribir("Componentes preparados en memoria exitosamente.");
+terminar metodo
+
+// 4. RESULTADOS
+metodo resultados() empezar
+    si (marcoPrincipal no es nulo) entonces
+        llamar a marcoPrincipal.setVisible(verdadero);
+        Escribir("Ventana grafica desplegada en pantalla.");
+    terminar si
+terminar metodo
+
+// 5. NAVEGABILIDAD
+metodo menuPrincipal() empezar
+    mientras (verdadero) empezar
+        Escribir("\n1. Cargar y visualizar imagen");
+        Escribir("2. Salir");
+        opcion = Leer cadena desde teclado;
+        
+        segun (opcion) hacer
+            caso "1" -> empezar
+                llamar a data();
+                llamar a proceso();
+                llamar a resultados();
+            terminar caso
+            caso "2" -> empezar
+                Escribir("Finalizando ejecucion de manera ordenada...");
+                romper ciclo;
+            terminar caso
+            defecto -> Escribir("Opcion invalida.");
+        terminar segun
+    terminar mientras
+terminar metodo
+terminar Clase
+
+Principal empezar
+app = instanciar PruebaImageIcon();
+llamar a app.meta();
+llamar a app.menuPrincipal();
+terminar Principal
