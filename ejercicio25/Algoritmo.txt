@@ -1,0 +1,81 @@
+// 1. META
+metodo meta() empezar
+    Escribir("=== COMPRESION Y EXTRACCION DE ARCHIVOS ZIP ===")
+    Escribir("Programa para comprimir un directorio (Ej. 23) y extraer")
+    Escribir("un archivo ZIP (Ej. 24) usando el modulo zipfile.")
+terminar metodo
+
+// 2. DATA
+metodo data() empezar
+    si (opcion == "1") entonces
+        Escribir("Directorio a comprimir: ")
+        origen = Leer cadena desde teclado
+        Escribir("Ruta destino (.zip): ")
+        destino = Leer cadena desde teclado
+    sino si (opcion == "2") entonces
+        Escribir("Ruta del archivo ZIP: ")
+        origen = Leer cadena desde teclado
+        Escribir("Directorio de extraccion: ")
+        destino = Leer cadena desde teclado
+    terminar si
+terminar metodo
+
+// 3. PROCESO (Alta cohesión para ambas operaciones)
+metodo proceso() empezar
+    exito = falso
+    intentar
+        si (opcion == "1") entonces
+            zf = instanciar ZipFile(destino, modo "escribir")
+            para cada (raiz, archivos) en arbolDeDirectorios(origen) hacer
+                para cada arch en archivos hacer
+                    rutaCompleta = unirRuta(raiz, arch)
+                    rutaRelativa = obtenerRutaRelativa(rutaCompleta, origen)
+                    llamar a zf.write(rutaCompleta, rutaRelativa)
+                terminar para
+            terminar para
+            cerrar zf
+            exito = verdadero
+        sino si (opcion == "2") entonces
+            zf = instanciar ZipFile(origen, modo "leer")
+            llamar a zf.extractall(destino)
+            cerrar zf
+            exito = verdadero
+        terminar si
+    atrapar Excepcion e
+        Escribir("ERROR: " + e.mensaje)
+    terminar intentar
+terminar metodo
+
+// 4. RESULTADOS
+metodo resultados() empezar
+    si (exito es verdadero) entonces
+        si (opcion == "1") entonces
+            Escribir("-> Directorio comprimido exitosamente en: " + destino)
+        sino si (opcion == "2") entonces
+            Escribir("-> Archivos extraidos exitosamente en: " + destino)
+        terminar si
+    terminar si
+terminar metodo
+
+// 5. NAVEGABILIDAD
+metodo navegabilidad() empezar
+    mientras (verdadero) empezar
+        Escribir("\n1. Comprimir directorio a ZIP (Ej. 23)")
+        Escribir("2. Extraer archivo ZIP (Ej. 24)")
+        Escribir("3. Salir")
+        opcion = Leer cadena desde teclado
+        
+        si (opcion == "3") entonces
+            Escribir("Fin del programa.")
+            romper ciclo
+        terminar si
+        
+        si (opcion == "1" o opcion == "2") entonces
+            llamar a data()
+            llamar a proceso()
+            llamar a resultados()
+        sino
+            Escribir("Opcion invalida.")
+        terminar si
+    terminar mientras
+terminar metodo

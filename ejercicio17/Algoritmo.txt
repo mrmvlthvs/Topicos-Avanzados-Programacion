@@ -1,0 +1,70 @@
+// 1. META
+metodo meta() empezar
+    Escribir("=== GESTORES DE GEOMETRIA (PACK, GRID, PLACE) ===")
+    Escribir("Programa para visualizar los 3 layouts de Tkinter")
+    Escribir("basado en los ejemplos de python-course.eu.")
+terminar metodo
+
+// 2. DATA
+metodo data() empezar
+    Escribir("Seleccione una accion: ")
+    opcion = Leer cadena desde teclado
+terminar metodo
+
+// 3. PROCESO (Construccion en memoria de la GUI sin bloquear hilo)
+metodo proceso() empezar
+    segun (opcion) hacer
+        caso "1" -> empezar
+            ventana = instanciar Tk()
+            llamar a ventana.title("Ejemplo Pack")
+            crear Etiqueta(ventana, "Red", fondo "rojo") y aplicar pack()
+            crear Etiqueta(ventana, "Green", fondo "verde") y aplicar pack()
+            crear Etiqueta(ventana, "Blue", fondo "azul") y aplicar pack()
+        terminar caso
+        caso "2" -> empezar
+            ventana = instanciar Tk()
+            llamar a ventana.title("Ejemplo Grid")
+            crear Etiqueta(ventana, "First name").grid(fila 0, col 0)
+            crear Etiqueta(ventana, "Last name").grid(fila 1, col 0)
+            crear Entrada(ventana).grid(fila 0, col 1)
+            crear Entrada(ventana).grid(fila 1, col 1)
+        terminar caso
+        caso "3" -> empezar
+            ventana = instanciar Tk()
+            llamar a ventana.title("Ejemplo Place")
+            llamar a ventana.geometry("200x200")
+            crear Etiqueta(ventana, "x=20, y=20").place(x=20, y=20)
+            crear Etiqueta(ventana, "x=80, y=80").place(x=80, y=80)
+        terminar caso
+        caso "4" -> retornar
+        defecto -> Escribir("Opcion invalida.")
+    terminar segun
+terminar metodo
+
+// 4. RESULTADOS (Despliegue visual bloqueante)
+metodo resultados() empezar
+    si (ventana no es nula) entonces
+        Escribir("-> Desplegando interfaz de Tkinter...")
+        llamar a ventana.mainloop()
+        ventana = nulo
+    terminar si
+terminar metodo
+
+// 5. NAVEGABILIDAD
+metodo navegabilidad() empezar
+    mientras (verdadero) empezar
+        Escribir("\n1. Layout Pack")
+        Escribir("2. Layout Grid")
+        Escribir("3. Layout Place")
+        Escribir("4. Salir")
+        
+        llamar a data()
+        si (opcion == "4") entonces
+            Escribir("Fin de la ejecucion.")
+            romper ciclo
+        terminar si
+        
+        llamar a proceso()
+        llamar a resultados()
+    terminar mientras
+terminar metodo
