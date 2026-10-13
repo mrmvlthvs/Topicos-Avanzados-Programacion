@@ -1,4 +1,4 @@
-//package cards.domain;
+package cards.domain;
 
 public class PlayingCard {
 

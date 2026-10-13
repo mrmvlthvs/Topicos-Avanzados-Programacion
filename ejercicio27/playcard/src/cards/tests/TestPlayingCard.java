@@ -1,7 +1,7 @@
-//package cards.tests;
+package cards.tests;
 
-//import cards.domain.PlayingCard;
-//import cards.domain.Suit;
+import cards.domain.PlayingCard;
+import cards.domain.Suit;
 
 public class TestPlayingCard {
   public static void main(String[] args) {

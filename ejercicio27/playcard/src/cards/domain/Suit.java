@@ -1,4 +1,4 @@
-//package cards.domain;
+package cards.domain;
 
 public enum Suit {
   SPADES   ("Spades"),
