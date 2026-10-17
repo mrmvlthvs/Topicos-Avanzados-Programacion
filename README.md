@@ -19,7 +19,7 @@
 ## Agosto 2026
 
 ### Jueves 20 de Agosto 2026
-* **Ejercicio 1:** Favor de elaborar un mapa mental que incluya los conceptos definidos en el tema 2.1 a saber: Sistema, modulo, paquete,  componente, capa, clase Biblioteca y API, se sugiere utilizar los simbolos de UML apropiados.
+* **[Ejercicio 1](/ejercicio01/Mapa%20Mental.pdf):** Favor de elaborar un mapa mental que incluya los conceptos definidos en el tema 2.1 a saber: Sistema, modulo, paquete,  componente, capa, clase Biblioteca y API, se sugiere utilizar los simbolos de UML apropiados.
 
 ### Viernes 21 de Agosto 2026
 * **[Ejercicio 2](/ejercicio02/hellofx/src/main/java/hellofx/HelloFX.java):** Favor de usar la referencia https://openjfx.io/openjfx-docs/ favor de instalar la biblioteca javaFX apropiada a su version de jdk17 o posterior, asi como la documentacion de las api's openjfx-26.0.2-javadoc.zip o compatible con su jdk en uso enseguida descompactarla, configurar su variable de ambiente PATH_TO_FX, finalmente probarla compilando y corriendo el programa HelloFX.java que está en el repositorio: https://github.com/openjfx/samples/blob/master/HelloFX/CLI/hellofx/HelloFX.java 
@@ -60,7 +60,7 @@
 ### 4 de Septiembre 2026
 * **[Ejercicio 23](/ejercicio23/zipdirectory/src/main/java/ZipDirectoryExample.java):** Favor de usar la referencia: https://kodejava.org/?s=ZipDirectoryExample y correr la clase ZipDirectoryExample.java que empaca un subdirectorio del disco en la unidad D:\Data recursivamente con todos sus subdirectorios.
 * **[Ejercicio 24](/ejercicio24/unzipfiles/src/main/java/UnzipFiles.java):** Favor de usar la referencia: https://www.journaldev.com/960/java-unzip-file-example y correr la clase: UnzipFiles.java como contraparte del ejercicio 23 en este caso se utilizan bibliotecas de los paquetes java.io.* y java.util.*.
-* **[Ejercicio 25]():** hacer lo mismo que los ejercicios 23 y 24 con python usando la referencia: https://www.geeksforgeeks.org/working-zip-files-python/ https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory
+* **[Ejercicio 25](/ejercicio25/GestorZip.py):** hacer lo mismo que los ejercicios 23 y 24 con python usando la referencia: https://www.geeksforgeeks.org/working-zip-files-python/ https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory
 * **[Ejercicio 26]():** Favor de correr el codigo de la referencia: https://coderslegacy.com/java/javafx-widgets-list/
 					    
           La clase Tutorial para los componentes graficos o widgets javafx 
@@ -72,13 +72,21 @@
          17. ToolBar       18. MediaView     19. FileChooser   20. DatePicker  
 				 
 				 # que le toca a usted = (# lista + numero de ejercicio) mod 20 + 1 
-* **[Ejercicio 27](/):** favor de correr el ejemplo de enumerados en el aula virtual usando la clase TestPlayingCard.java
-* **[Ejercicio 28](/):** favor de navegar a la referencia URL https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html para copiar el enumerado Planet.java y correrlo en su terminal
+* **[Ejercicio 27](/ejercicio27/playcard/src/cards/tests/TestPlayingCard.java):** favor de correr el ejemplo de enumerados en el aula virtual usando la clase TestPlayingCard.java
+* **[Ejercicio 28](/ejercicio28/planet/src/main/java/Planet.java):** favor de navegar a la referencia URL https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html para copiar el enumerado Planet.java y correrlo en su terminal
 * **[Ejercicio 29](/ejercicio29/ejem1/src/main/java/Ejemplo1.java):** Favor de correr el ejemplo 1 del pdf llamado "Aprenda Java Como si estuviera en primero"
 * **[Ejercicio 30](/ejercicio30/listatap/src/main/java/ListaTap.java):** Favor de correr la clase ListTap.java presente en su aula virtual.
 * **[Ejercicio 31](/ejercicio31/setexample/src/main/java/SetExample.java):** Favor de correr la clase SetExample.java presente en el segundo tema del curso en el aula virtual.
-* **[Ejercicio 32]():** Lo mismo que el ejercicio 30 ahora par ListExample.java
+* **[Ejercicio 32](/ejercicio32/listexample/src/main/java/ListExample.java):** Lo mismo que el ejercicio 30 ahora par ListExample.java
 * **[Ejercicio 33](/ejercicio33/genericmethod/src/main/java/GenericMethodTest.java):** Favor de correr el ejercicio llamado GenericMethodTest.java presente en la referencia URL http://www.tutorialspoint.com/java/java_generics.htm 
+* **[Ejercicio 34](/ejercicio34/simple-modules/module-project/simple-modules/main.app/com/baeldung/modules/main/MainApp.java):** Correr el ejemplo de modulos java 9 con la referencia https://www.baeldung.com/java-9-modularity
+* **[Ejercicio 35](/ejercicio35/foreachanidados/src/main/java/arslan/):** Favor de correr los ejemplos de iteradores anidados vs for each presentes en la referencia: https://www.geeksforgeeks.org/iterator-vs-foreach-in-java
+* **[Ejercicio 36](/ejercicio36/catalogo/src/main/java/PruebaCatalogo.java):** Favor de correr la clase PruebaCatalogo.java que implementa una colleccion de registros persistente con RandomAccesFile en java conforme al algoritmo Crud Persona presente en el aula virtual 
+* **[Ejercicio 37]():** Haga el ejercicio 35 pero ahora en python modo texto utilice la referencia:
+https://www.dremendo.com/python-programming-tutorial/python-binary-file-handling favor de mejorar la modularidad del ejercicio separando un  metodo para cada operacion del CRUD
+* **[Ejercicio 38]():** Favor de visitar la referencia: http://www.java2s.com/Code/Java/Development-Class/UsejavautilTimertoscheduleatasktoexecuteonce5secondshavepassed.htm y correr la clase llamada ReminderBeep.java 
+* **[Ejercicio 39]():** usando la documentacion de las API’s https://docs.oracle.com/javase/7/docs/api/index.html?java/util/EventObject.html
+              Dibuje el diagrama UML para la clase EventObject
 
 ### Martes 22 de Septiembre 2026
 * **[*Tarea 1*](/tarea1/imageicon/src/main/java/arslan/PruebaImageIcon.java):** Por favor utilice la referencia https://www.tutorialspoint.com/swing/swing_quick_guide.htm Para utilizar uno de los ejemplos incluidos en ella con alguno de los componentes graficos que pertenecen al paquete javax.swing.* y que estan numerados a partir de 1. Jlabel hasta 17. JSpinner. Use la siguiente formula para determinar el: Componente que le toca a usted ) = # de lista mod 17 + 1 **ImageIcon** Y a partir del codigo fuente del ejemplo correspondiente. Entregue su reporte Incluyendo: 
