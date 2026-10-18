@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PruebaEventosBoton",
+            "request": "launch",
+            "mainClass": "PruebaEventosBoton",
+            "projectName": "botones"
+        },
+        {
+            "type": "java",
             "name": "ComplexLayoutExample",
             "request": "launch",
             "mainClass": "ComplexLayoutExample",

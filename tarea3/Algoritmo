@@ -1,0 +1,59 @@
+1. META
+    Escribir("Prueba de Eventos con Botones");
+    Escribir("""Programa que permite probar el manejo de eventos mediante 
+                botones (biblioteca AWT de Java).""");
+
+2. DATA
+    # NO HAY, no se introducen datos crudos al programa.
+
+3. PROCESO o CALCULOS
+    # NO HAY, no se realizan cálculos ni procesos de datos.
+
+4. RESULTADOS
+    objGUI = instanciar EventosBotones()
+    llamar a objGUI.forma1() 
+    llamar a objGUI.mostrar() // ejecuta la primera ventana del programa
+
+
+5. NAVEGABILIDAD
+    si (boton1 es presionado) entonces
+        llamar a objGUI.forma2()
+    terminar si
+    si (boton2 es presionado) entonces
+        si (ventana2 es visible) entonces
+            llamar a objGUI.cerrar()
+    terminar si
+    si (botonExit es presionado) entonces
+        llamar a objGUI.cierreConfirmar()
+    terminar si
+    
+5.1 mostrar()
+    si (ventana1 es visible) entonces
+        llamar a ventana1.setVisible(true)
+    terminar si
+
+5.2 cerrar()
+    si (ventana2 es visible) entonces
+        llamar a ventana2.setVisible(false)
+        llamar a ventana2.dispose() // libera recursos de la ventana
+    terminar si
+
+5.3 cierreConfirmar()
+    si (ventana1 es visible) entonces
+        Escribir("¿Desea salir del programa?");
+        respuesta = ?;
+        si (respuesta == "Si") entonces
+            llamar a ventana1.setVisible(false)
+            llamar a ventana1.dispose() // libera recursos de la ventana
+        terminar si
+    terminar si
+
+5.4 ManejadorEventosBoton.actionPerformed()
+    si (fuente del evento es boton1) entonces
+        llamar a forma2() // navega a la ventana 2
+    sino si (fuente del evento es boton2) entonces
+        si (ventana2 es visible) entonces
+            llamar a ventana2.setVisible(false)
+            llamar a ventana2.dispose() // libera recursos de la ventana
+        terminar si
+    terminar si
