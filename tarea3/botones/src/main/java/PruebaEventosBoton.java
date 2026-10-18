@@ -26,7 +26,5 @@ public class PruebaEventosBoton {
 
         test.meta();
         test.resultados();
-        JOptionPane.showMessageDialog(null, "Cerrando programa...", 
-                                "FIN DEL PROGRAMA", JOptionPane.PLAIN_MESSAGE);
     }
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama UML - Ejercicio EventosBotones</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: monospace, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px; 
+            padding: 50px;
+        }
+
+        .capsula {
+            border: 2px solid #000000; 
+            border-radius: 50px; 
+            width: 80%;
+            max-width: 600px;
+            background-color: #FFFFFF;
+            overflow: hidden; 
+            box-sizing: border-box;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .compartimento {
+            padding: 15px 40px;
+        }
+
+        .alinear-izq {
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .alinear-centro {
+            text-align: center;
+        }
+
+        .nombre-clase {
+            font-weight: bold;
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .estereotipo {
+            font-style: italic;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .enlace-doc {
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.9em;
+            word-wrap: break-word;
+        }
+
+        .separador {
+            border: none;
+            border-top: 2px solid #000000;
+            margin: 0 auto;
+            width: 90%; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Clase de Prueba -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="nombre-clase">PruebaEventosBoton</span>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            - objGUI : EventosBotones
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            + meta() : void<br>
+            + data() : void<br>
+            + proceso() : void<br>
+            + resultados() : void<br>
+            + navegabilidad() : void<br>
+            + main(args: String[]) : void {static}
+        </div>
+    </div>
+
+    <!-- 2. Clase Encapsulada Principal -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="nombre-clase">EventosBotones</span>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            - v1 : java.awt.Frame<br>
+            - v2 : java.awt.Frame<br>
+            - boton1 : java.awt.Button<br>
+            - boton2 : java.awt.Button<br>
+            - oyeBoton : ManejadorEventosBoton
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            + EventosBotones()<br>
+            + forma1() : void<br>
+            + forma2() : void<br>
+            + mostrar() : void<br>
+            + cerrar() : void<br>
+            + cierreConfirmar() : void
+        </div>
+    </div>
+
+    <!-- 3. Clase Interna (Manejador) -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="estereotipo">&lt;&lt;inner class&gt;&gt;</span>
+            <span class="nombre-clase">ManejadorEventosBoton</span>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            <i>Sin atributos propios</i>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            + actionPerformed(evento: java.awt.event.ActionEvent) : void
+        </div>
+    </div>
+
+    <!-- 4. Interfaz Implementada -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="estereotipo">&lt;&lt;interface&gt;&gt;</span>
+            <span class="nombre-clase">java.awt.event.ActionListener</span>
+            <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/event/ActionListener.html" class="enlace-doc">https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/event/ActionListener.html</a>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            <i>Sin atributos</i>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            + actionPerformed(e: java.awt.event.ActionEvent) : void
+        </div>
+    </div>
+
+</body>
+</html>
