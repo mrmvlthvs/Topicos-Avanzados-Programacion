@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagrama UML - Ejercicio EventosBotones</title>
+    <title>Diagrama UML Actualizado - EventosBotones</title>
     <style>
         body {
             background-color: #FFFFFF;
@@ -47,20 +47,6 @@
             display: block;
             margin-bottom: 8px;
         }
-        
-        .estereotipo {
-            font-style: italic;
-            font-size: 1em;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .enlace-doc {
-            color: #000000;
-            text-decoration: none;
-            font-size: 0.9em;
-            word-wrap: break-word;
-        }
 
         .separador {
             border: none;
@@ -79,15 +65,15 @@
         </div>
         <hr class="separador">
         <div class="compartimento alinear-izq">
-            - objGUI : EventosBotones
+            - obj : EventosBotones
         </div>
         <hr class="separador">
         <div class="compartimento alinear-izq">
-            + meta() : void<br>
-            + data() : void<br>
-            + proceso() : void<br>
-            + resultados() : void<br>
-            + navegabilidad() : void<br>
+            ~ meta() : void<br>
+            ~ data() : void<br>
+            ~ proceso() : void<br>
+            ~ resultados() : void<br>
+            ~ navegabilidad() : void<br>
             + main(args: String[]) : void {static}
         </div>
     </div>
@@ -101,51 +87,18 @@
         <div class="compartimento alinear-izq">
             - v1 : java.awt.Frame<br>
             - v2 : java.awt.Frame<br>
-            - boton1 : java.awt.Button<br>
-            - boton2 : java.awt.Button<br>
-            - oyeBoton : ManejadorEventosBoton
+            - b1 : java.awt.Button<br>
+            - b2 : java.awt.Button
         </div>
         <hr class="separador">
         <div class="compartimento alinear-izq">
-            + EventosBotones()<br>
-            + forma1() : void<br>
-            + forma2() : void<br>
-            + mostrar() : void<br>
-            + cerrar() : void<br>
-            + cierreConfirmar() : void
-        </div>
-    </div>
-
-    <!-- 3. Clase Interna (Manejador) -->
-    <div class="capsula">
-        <div class="compartimento alinear-centro">
-            <span class="estereotipo">&lt;&lt;inner class&gt;&gt;</span>
-            <span class="nombre-clase">ManejadorEventosBoton</span>
-        </div>
-        <hr class="separador">
-        <div class="compartimento alinear-izq">
-            <i>Sin atributos propios</i>
-        </div>
-        <hr class="separador">
-        <div class="compartimento alinear-izq">
-            + actionPerformed(evento: java.awt.event.ActionEvent) : void
-        </div>
-    </div>
-
-    <!-- 4. Interfaz Implementada -->
-    <div class="capsula">
-        <div class="compartimento alinear-centro">
-            <span class="estereotipo">&lt;&lt;interface&gt;&gt;</span>
-            <span class="nombre-clase">java.awt.event.ActionListener</span>
-            <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/event/ActionListener.html" class="enlace-doc">https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/event/ActionListener.html</a>
-        </div>
-        <hr class="separador">
-        <div class="compartimento alinear-izq">
-            <i>Sin atributos</i>
-        </div>
-        <hr class="separador">
-        <div class="compartimento alinear-izq">
-            + actionPerformed(e: java.awt.event.ActionEvent) : void
+            + setBotones() : void<br>
+            + setVentana1() : void<br>
+            + setVentana2() : void<br>
+            + mostrarVentana(v: int) : void<br>
+            + cerrarVentana(ventana: int) : void<br>
+            + confirmacion(v: java.awt.Frame) : void<br>
+            + cerrar(v: java.awt.Frame) : void
         </div>
     </div>
 

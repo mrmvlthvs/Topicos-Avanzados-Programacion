@@ -13,41 +13,23 @@ public class PruebaEventosBoton {
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
-    // 2. DATA
-    void data() {
-        // NO HAY. No se introducen datos crudos al programa.
-    }
-
-    // 3. PROCESO
-    void proceso() {
-        // NO HAY. No se realizan calculos ni transformacion de datos.
-    }
-
-    // 4. RESULTADOS
-    void resultados() {
-        // NO HAY. El despliegue visual se delego a navegabilidad.
-    }
+    // 2. DATA NO HAY. No se introducen datos crudos al programa.
+    // 3. PROCESO NO HAY. No se realizan calculos ni transformacion de datos.
+    // 4. RESULTADOS NO HAY. El despliegue visual se delego a navegabilidad.
 
     // 5. NAVEGABILIDAD
     void navegabilidad() {
         obj = new EventosBotones();
 
-        // Construccion estructural
         obj.setVentana1();
         obj.setVentana2();
-
-        // Interaccion visual inicial
         obj.mostrarVentana(1);
-        System.out.println("-> Navegabilidad activa en capa visual.");
     }
 
     public static void main(String[] args) {
         PruebaEventosBoton test = new PruebaEventosBoton();
 
         test.meta();
-        test.data();
-        test.proceso();
-        test.resultados();
         test.navegabilidad();
     }
 }

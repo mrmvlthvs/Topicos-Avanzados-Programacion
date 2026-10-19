@@ -78,7 +78,7 @@ public class EventosBotones {
             Button btnNo = new Button("No");
 
             btnSi.addActionListener(ev -> {
-                cerrar(v); // Corregido: Libera recursos directamente
+                cerrar(v); 
                 System.exit(0);
             });
             btnNo.addActionListener(ev -> dialog.dispose());

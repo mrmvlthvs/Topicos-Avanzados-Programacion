@@ -1,8 +1,8 @@
 1. META
-    Escribir("Prueba de Eventos con Botones");
-    Escribir("""Programa que permite probar el manejo de eventos mediante 
-                botones (biblioteca AWT de Java).""");
-
+    Escribir("Prueba de Eventos con Botones")
+    Escribir("""
+            Programa que permite probar el manejo de eventos mediante
+            botones, elementos pertenecientes de biblioteca AWT de Java.""");
 2. DATA
     # NO HAY, no se introducen datos crudos al programa.
 
@@ -10,50 +10,54 @@
     # NO HAY, no se realizan cálculos ni procesos de datos.
 
 4. RESULTADOS
-    objGUI = instanciar EventosBotones()
-    llamar a objGUI.forma1() 
-    llamar a objGUI.mostrar() // ejecuta la primera ventana del programa
-
+    # NO HAY, el despliegue visual se delego a la fase de navegabilidad.
 
 5. NAVEGABILIDAD
-    si (boton1 es presionado) entonces
-        llamar a objGUI.forma2()
-    terminar si
-    si (boton2 es presionado) entonces
-        si (ventana2 es visible) entonces
-            llamar a objGUI.cerrar()
-    terminar si
-    si (botonExit es presionado) entonces
-        llamar a objGUI.cierreConfirmar()
-    terminar si
+    obj = instanciar EventosBotones()
+    llamar a obj.setVentana1() // Construye ventana principal y sus eventos
+    llamar a obj.setVentana2() // Construye ventana secundaria y sus eventos
+    llamar a obj.mostrarVentana(1) // Ejecuta y muestra la primera ventana
     
-5.1 mostrar()
-    si (ventana1 es visible) entonces
-        llamar a ventana1.setVisible(true)
+5.1 setBotones()
+    si (boton b1 es presionado) entonces
+        llamar a mostrarVentana(2)
+    terminar si
+    si (boton b2 es presionado) entonces
+        llamar a cerrarVentana(2)
     terminar si
 
-5.2 cerrar()
-    si (ventana2 es visible) entonces
-        llamar a ventana2.setVisible(false)
-        llamar a ventana2.dispose() // libera recursos de la ventana
+5.2 Eventos de Cierre (X) de las Ventanas
+    si (botonExit de v1 es presionado) entonces
+        llamar a cerrarVentana(1)
+    terminar si
+    si (botonExit de v2 es presionado) entonces
+        llamar a cerrarVentana(2)
     terminar si
 
-5.3 cierreConfirmar()
-    si (ventana1 es visible) entonces
-        Escribir("¿Desea salir del programa?");
-        respuesta = ?;
+5.3 mostrarVentana(v)
+    segun (v) hacer
+        caso 1 -> hacer visible v1 (setVisible(true))
+        caso 2 -> hacer visible v2 (setVisible(true))
+    terminar segun
+
+5.4 cerrarVentana(ventana)
+    segun (ventana) hacer
+        caso 1 -> llamar a confirmacion(v1)
+        caso 2 -> llamar a cerrar(v2)
+    terminar segun
+
+5.5 confirmacion(v)
+    si (v no es nulo y es visible) entonces
+        Escribir("¿Desea salir del programa?")
+        respuesta = ?
         si (respuesta == "Si") entonces
-            llamar a ventana1.setVisible(false)
-            llamar a ventana1.dispose() // libera recursos de la ventana
+            llamar a cerrar(v) // libera recursos
+            Finalizar programa (System.exit(0))
         terminar si
     terminar si
 
-5.4 ManejadorEventosBoton.actionPerformed()
-    si (fuente del evento es boton1) entonces
-        llamar a forma2() // navega a la ventana 2
-    sino si (fuente del evento es boton2) entonces
-        si (ventana2 es visible) entonces
-            llamar a ventana2.setVisible(false)
-            llamar a ventana2.dispose() // libera recursos de la ventana
-        terminar si
+5.6 cerrar(v)
+    si (v no es nulo) entonces
+        llamar a v.setVisible(false)
+        llamar a v.dispose() // libera recursos fisicos de la ventana
     terminar si
