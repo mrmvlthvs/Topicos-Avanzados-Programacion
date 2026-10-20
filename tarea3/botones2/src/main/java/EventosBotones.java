@@ -1,16 +1,29 @@
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Dialog;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class EventosBotones {
     private Frame v1, v2;
     private Button b1, b2;
 
+    public Button getB1() { return b1; }
+    public Button getB2() { return b2; }
+
     public void setBotones() {
         b1 = new Button("Abrir Frame");
         b2 = new Button("Cerrar Frame");
+        ManejadorEventosBoton manejador = new ManejadorEventosBoton(this);
 
-        b1.addActionListener(ev -> mostrarVentana(2));
-        b2.addActionListener(ev -> cerrarVentana(2));
+        b1.addActionListener(manejador);
+        b2.addActionListener(manejador);
     }
 
     public void setVentana1() {
@@ -24,6 +37,7 @@ public class EventosBotones {
 
         // NAVEGABILIDAD: Permite cerrar con la 'X' de la ventana
         v1.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 cerrarVentana(1);
             }
@@ -42,15 +56,16 @@ public class EventosBotones {
 
         // NAVEGABILIDAD: Permite ocultar con la 'X' de la ventana
         v2.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 cerrarVentana(2);
             }
         });
 
         v2.pack();
-        if (v1 != null) {
+        if (v1 != null) 
             v2.setLocationRelativeTo(v1);
-        }
+
     }
 
     public void mostrarVentana(int v) {
@@ -77,11 +92,22 @@ public class EventosBotones {
             Button btnSi = new Button("Si");
             Button btnNo = new Button("No");
 
-            btnSi.addActionListener(ev -> {
-                cerrar(v); 
-                System.exit(0);
+            // Se elimina la lambda (->) y se usa clase anonima tradicional
+            btnSi.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ev) {
+                    cerrar(v); 
+                    System.exit(0);
+                }
             });
-            btnNo.addActionListener(ev -> dialog.dispose());
+
+            // Se elimina la lambda (->) y se usa clase anonima tradicional
+            btnNo.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ev) {
+                    dialog.dispose();
+                }
+            });
 
             dialog.add(new Label("¿Desea salir del programa?"));
             dialog.add(btnSi);
