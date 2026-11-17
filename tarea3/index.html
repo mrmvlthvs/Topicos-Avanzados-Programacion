@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama UML Actualizado - EventosBotones</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: monospace, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px; 
+            padding: 50px;
+        }
+
+        .capsula {
+            border: 2px solid #000000; 
+            border-radius: 50px; 
+            width: 80%;
+            max-width: 600px;
+            background-color: #FFFFFF;
+            overflow: hidden; 
+            box-sizing: border-box;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .compartimento {
+            padding: 15px 40px;
+        }
+
+        .alinear-izq {
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .alinear-centro {
+            text-align: center;
+        }
+
+        .nombre-clase {
+            font-weight: bold;
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .separador {
+            border: none;
+            border-top: 2px solid #000000;
+            margin: 0 auto;
+            width: 90%; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Clase de Prueba -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="nombre-clase">PruebaEventosBoton</span>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            - obj : EventosBotones
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            ~ meta() : void<br>
+            ~ data() : void<br>
+            ~ proceso() : void<br>
+            ~ resultados() : void<br>
+            ~ navegabilidad() : void<br>
+            + main(args: String[]) : void {static}
+        </div>
+    </div>
+
+    <!-- 2. Clase Encapsulada Principal -->
+    <div class="capsula">
+        <div class="compartimento alinear-centro">
+            <span class="nombre-clase">EventosBotones</span>
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            - v1 : java.awt.Frame<br>
+            - v2 : java.awt.Frame<br>
+            - b1 : java.awt.Button<br>
+            - b2 : java.awt.Button
+        </div>
+        <hr class="separador">
+        <div class="compartimento alinear-izq">
+            + setBotones() : void<br>
+            + setVentana1() : void<br>
+            + setVentana2() : void<br>
+            + mostrarVentana(v: int) : void<br>
+            + cerrarVentana(ventana: int) : void<br>
+            + confirmacion(v: java.awt.Frame) : void<br>
+            + cerrar(v: java.awt.Frame) : void
+        </div>
+    </div>
+
+</body>
+</html>

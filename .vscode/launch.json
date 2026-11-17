@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Greeting2",
+            "request": "launch",
+            "mainClass": "arslan.greetingfx.Greeting2",
+            "projectName": "greetingfx"
+        },
+        {
+            "type": "java",
+            "name": "Greeting2",
+            "request": "launch",
+            "mainClass": "Greeting2",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "hellofx.Main",
+            "projectName": "hellofx"
+        },
+        {
+            "type": "java",
+            "name": "PruebaEventosBoton",
+            "request": "launch",
+            "mainClass": "PruebaEventosBoton",
+            "projectName": "botones"
+        },
+        {
+            "type": "java",
             "name": "ComplexLayoutExample",
             "request": "launch",
             "mainClass": "ComplexLayoutExample",

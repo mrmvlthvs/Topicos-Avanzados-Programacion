@@ -11,59 +11,56 @@ Fecha: 25/08/2026
 
 ===== ALGORITMO GUI COMPONENTES =====
 
-1. Meta:
-    Programa con interfaz grafica para identificar
-    los contenedores y activadores (entradas) del
-    algoritmo en un entorno visual de Java Swing.
+1.- META
+Programa que utiliza las prestaciones graficas provenientes de javax.swing
+para generar una ventana junto a una coleccion de artefactos interactivos simples.
 
-2. Data:
-    // Identificacion de CONTENEDORES
-    panel = nuevo JPanel();
-    frame = nuevo JFrame();
-    // Identificacion de ACTIVADORES (Controles de Entrada)
-    jbtOK = nuevo JButton("OK");
-    jbtCancel = nuevo JButton("Cancel");
-    jtfName = nuevo JTextField("Type Name Here");
-    jchkBold = nuevo JCheckBox("Bold");
-    jchkItalic = nuevo JCheckBox("Italic");
-    jrbRed = nuevo JRadioButton("Red");
-    jrbYellow = nuevo JRadioButton("Yellow");
-    opciones = ["Freshman", "Sophomore", "Junior", "Senior"];
-    jcboColor = nuevo JComboBox(opciones);
-    // Identificacion de Etiquetas (Salida/Visual)
-    jlblName = nuevo JLabel("Enter your name: ");
+2. DATOS
+No Aplica
 
-3. Proceso:
-    llamar a addComponents();
-    llamar a prepararFrame();
+3. PROCESOS
+No Aplica
 
-3.1 addComponents:
-    // Integrar activadores al contenedor secundario (panel)
-    llamar a panel.add(jbtOK);
-    llamar a panel.add(jbtCancel);
-    llamar a panel.add(jlblName);
-    llamar a panel.add(jtfName);
-    llamar a panel.add(jchkBold);
-    llamar a panel.add(jchkItalic);
-    llamar a panel.add(jrbRed);
-    llamar a panel.add(jrbYellow);
-    llamar a panel.add(jcboColor);
+4. SALIDA
+    panel = create Panel();
+    jbtOK = create Button("Ok");
+    jbtCancel = create Button("Cancel");
+    jiblName = create Label("Enter your name");
+    jtfName = create TextField("Type Name Here");
+    jchkBold = create CheckBox("Bold");
+    jchkItalic = create CheckBox("Italic");
+    jrbRed = create RadioButton("Red");
+    jrbYellow = create RadioButton("Yellow");
+    jcboColor = create ComboBox("Freshman", "Sophomore",
+                                "Junior", "Senior")
 
-3.2 prepararFrame:
-    // Configurar y armar el contenedor principal (frame)
-    llamar a frame.add(panel);
-    llamar a frame.setTitle("Show GUI Components");
-    llamar a frame.setSize(450, 100);
-    llamar a frame.setLocation(200, 100);
-    llamar a frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-4. Resultados:
-    // Desplegar la interfaz ensamblada al usuario
-    llamar a frame.setVisible(verdadero);
+4.1 addComponents() 
+    panel.add(jbtOK);
+    panel.add(jbtCanel);
+    panel.add(jiblName);
+    panel.add(jtfName);
+    panel.add(jchkBold);
+    panel.add(jchkItalic);
+    panel.add(jrbRed);
+    panel.add(jrbYellow);
+    panel.add(jcboColor);
 
-5. Navegabilidad:
-    // Hilo principal de ejecucion
-    llamar a meta();
-    llamar a data();
-    llamar a proceso();
-    llamar a resultados();
+
+4.2 show() 
+    frame = create frame();
+
+    frame.add(panel);
+    frame.setTitle("Show GUI Components");
+    frame.setSizeX(450);
+    frame.setSizeY(100);
+    frame.setLocationX(200);
+    frame.setLocationY(100);
+    frame.setVisible(true);
+
+
+5. NAVEGABILIDAD
+    gc = create GUIComponents();
+
+    gc.addComponents();
+    gc.show();
