@@ -1,0 +1,95 @@
+.fondo-arena {
+    -fx-background-color: #0B0E14;
+}
+
+.barra-superior {
+    -fx-background-color: #151922;
+    -fx-border-color: #2A3140;
+    -fx-border-width: 0 0 2 0;
+}
+
+.reloj-combate {
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 86px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFD600;
+    -fx-effect: dropshadow(gaussian, rgba(255, 214, 0, 0.35), 15, 0.2, 0, 0);
+}
+
+.etiqueta-round {
+    -fx-font-family: "Arial";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #232A38;
+    -fx-padding: 6 20 6 20;
+    -fx-background-radius: 20;
+}
+
+.tarjeta-chung {
+    -fx-background-color: linear-gradient(to bottom right, #0D47A1, #06214D);
+    -fx-background-radius: 24;
+    -fx-border-color: #2979FF;
+    -fx-border-width: 2;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(13, 71, 161, 0.5), 25, 0, 0, 8);
+}
+
+.tarjeta-hong {
+    -fx-background-color: linear-gradient(to bottom right, #B71C1C, #4F0808);
+    -fx-background-radius: 24;
+    -fx-border-color: #FF5252;
+    -fx-border-width: 2;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(183, 28, 28, 0.5), 25, 0, 0, 8);
+}
+
+.nombre-competidor {
+    -fx-font-family: "Arial";
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.equipo-competidor {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-text-fill: #CFD8DC;
+}
+
+.numero-puntos {
+    -fx-font-family: "Arial";
+    -fx-font-size: 230px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);
+}
+
+.falta-inactiva {
+    -fx-background-color: rgba(0, 0, 0, 0.35);
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-border-radius: 6;
+}
+
+.falta-activa {
+    -fx-background-color: #FFD600;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(gaussian, #FFD600, 10, 0.5, 0, 0);
+}
+
+.boton-control {
+    -fx-background-color: #1F2633;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 22 10 22;
+    -fx-background-radius: 10;
+    -fx-border-color: #3A4559;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.boton-control:hover {
+    -fx-background-color: #2E384D;
+}
