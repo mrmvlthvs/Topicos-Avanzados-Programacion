@@ -9,104 +9,108 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-public class FxMenuExampleextendsApplication
-{
-//CreatetheMessageLabel
-Label messageLbl = new Label("PressanyMenuItemtoseethemessage");
-public static void main(String[] args)
-{
-    Application.launch(args);
-}
-@Override
-public void start(Stagestage)
-{
-//Createsomemenus
-    Menu fileMenu=new Menu("File");
-    Menu editMenu=new Menu("Edit");
-//CreatetheMenuItem New
-    MenuItem newItem=new MenuItem("New");
-    newItem.setOnAction(newEventHandler<ActionEvent>()
-    {
-        @Override
-        public void handle(ActionEvent e)
-        {
-            printMessage("You have pressed the NewMenuItem");
-        }
-    });
-//CreatetheMenuItem Open
-    MenuItem openItem=new MenuItem("Open");
-    openItem.setOnAction(newEventHandler<ActionEvent>()
-    {
-        @Override
-                publicvoidhandle(ActionEvente)
-        {
-            printMessage("Youhave pressedtheOpenMenuItem");
-        }
-    })
-//Addmenuitemsto theFilemenu
-    fileMenu.getItems().addAll(newItem,openItem);
-//CreatetheMenuItem Copy
-    MenuItemcopyItem=newMenuItem("Copy");
-    copyItem.setOnAction(newEventHandler<ActionEvent>()
-    {
-        @Override
-                public void handle(ActionEvente)
-        {
-            printMessage("Youhave pressedtheCopyMenuItem");
-        }
-})
-//CreatetheMenuItem Paste
-    MenuItempasteItem= newMenuItem("Paste");
-    pasteItem.setOnAction(newEventHandler<ActionEvent>()
-    {
-        @Override
-                public void handle(ActionEvente)
-        {
-            printMessage("Youhave pressedthePasteMenuItem");
-        }
-    })
-//Addmenuitemsto theEditmenu
-    editMenu.getItems().addAll(copyItem,pasteItem);
-//Createamenubar
-    MenuBar menuBar=new MenuBar();
-//Addmenustoamenu bar
-    menuBar.getMenus().addAll(fileMenu,editMenu);
-//CreatetheMenuBox
-    HBox menu=new HBox();
-//AddtheMenuBartotheMenuBox
-    menu.getChildren().add(menuBar);
-//CreatetheVBox
-    VBox root=new VBox();
-//Addthechildrento theVBox
-    root.getChildren().addAll(menu,messageLbl);
-//SettheSizeofthe VBox
-    root.setMinSize(350, 250);
-    /*
-     * SetthepaddingoftheVBox
-     * Settheborder-styleoftheVBox
-     * Settheborder-widthoftheVBox
-     * Settheborder-insetsoftheVBox
-     * Settheborder-radiusoftheVBox
-     * Settheborder-coloroftheVBox
-     */
-    root.setStyle("-fx-padding:10;"+
-            "-fx-border-style:solidinside;"+
-            "-fx-border-width:2;"+
-            "-fx-border-insets:5;"+
-            "-fx-border-radius:5;"+
-            "-fx-border-color:blue;");
-//CreatetheScene
-    Scenescene=newScene(root);
-//AddthescenetotheStage
-    stage.setScene(scene);
-//SetthetitleoftheStage
-    stage.setTitle("AMenu Example");
-//DisplaytheStage
-    stage.show();
-}
-public void printMessage(Stringmessage)
-{
-    // Set the Text of the Label
-    messageLbl.setText(message);
-}
+
+public class FxMenuExample extends Application {
+    // Create the Message Label
+    Label messageLbl = new Label("Press any MenuItem to see the message");
+
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) {
+        // Create some menus
+        Menu fileMenu = new Menu("File");
+        Menu editMenu = new Menu("Edit");
+
+        // Create the MenuItem New
+        MenuItem newItem = new MenuItem("New");
+        newItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                printMessage("You have pressed the New MenuItem");
+            }
+        });
+
+        // Create the MenuItem Open
+        MenuItem openItem = new MenuItem("Open");
+        openItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                printMessage("You have pressed the Open MenuItem");
+            }
+        });
+
+        // Add menu items to the File menu
+        fileMenu.getItems().addAll(newItem, openItem);
+
+        // Create the MenuItem Copy
+        MenuItem copyItem = new MenuItem("Copy");
+        copyItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                printMessage("You have pressed the Copy MenuItem");
+            }
+        });
+
+        // Create the MenuItem Paste
+        MenuItem pasteItem = new MenuItem("Paste");
+        pasteItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                printMessage("You have pressed the Paste MenuItem");
+            }
+        });
+
+        // Add menu items to the Edit menu
+        editMenu.getItems().addAll(copyItem, pasteItem);
+
+        // Create a menu bar
+        MenuBar menuBar = new MenuBar();
+        // Add menus to a menu bar
+        menuBar.getMenus().addAll(fileMenu, editMenu);
+
+        // Create the MenuBox
+        HBox menu = new HBox();
+        // Add the MenuBar to the MenuBox
+        menu.getChildren().add(menuBar);
+
+        // Create the VBox
+        VBox root = new VBox();
+        // Add the children to the VBox
+        root.getChildren().addAll(menu, messageLbl);
+        // Set the Size of the VBox
+        root.setMinSize(350, 250);
+
+        /*
+         * - Set the padding of the VBox
+         * - Set the border-style of the VBox
+         * - Set the border-width of the VBox
+         * - Set the border-insets of the VBox
+         * - Set the border-radius of the VBox
+         * - Set the border-color of the VBox
+         */
+        root.setStyle("-fx-padding: 10;" +
+                "-fx-border-style: solid inside;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 5;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: blue;");
+
+        // Create the Scene
+        Scene scene = new Scene(root);
+        // Add the scene to the Stage
+        stage.setScene(scene);
+        // Set the title of the Stage
+        stage.setTitle("A Menu Example");
+        // Display the Stage
+        stage.show();
+    }
+
+    // Helper Method
+    public void printMessage(String message) {
+        // Set the Text of the Label
+        messageLbl.setText(message);
+    }
 }
